@@ -2,15 +2,35 @@ package BookStore;
 
 public class Book {
 	
+	private String bookId;
 	private String title;
 	private String author;
 	private double price;
 	
-	public Book(String title, String author, double price) {
+	public Book(String bookId, String title, String author, double price) {
+		this.bookId = bookId;
 		this.title = title;
 		this.author = author;
 		this.price = price;
 		
+	}
+	public Book(String title, double price) {
+		this.title = title;
+		this.price = price;
+		
+		
+	}
+	
+	public Book() {
+		
+	}
+
+	public String getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(String bookId) {
+		this.bookId = bookId;
 	}
 
 	public String getTitle() {
@@ -37,5 +57,7 @@ public class Book {
 		this.price = price;
 	}
 	
+	
+
 
 }
